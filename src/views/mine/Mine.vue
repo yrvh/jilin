@@ -27,23 +27,19 @@
       <div class="status">
         <div class="order-item pay">
           <van-icon name="paid"></van-icon>
-          <span>待发货</span>
+          <span>待支付</span>
         </div>
         <div class="order-item send">
            <van-icon name="cart-circle-o"></van-icon>
-          <span>待送货</span>
+          <span>待送达</span>
         </div>
-        <div class="order-item receive">
+        <div class="order-item work">
            <van-icon name="gift-o"></van-icon>
-          <span>待收货</span>
+          <span>待完工</span>
         </div>
         <div class="order-item evaluate">
            <van-icon name="comment-o"></van-icon>
-          <span>评价</span>
-        </div>
-        <div class="order-item aftersale">
-           <van-icon name="cash-on-deliver"></van-icon>
-          <span>退货售后</span>
+          <span>待评价</span>
         </div>
       </div>
     </div>
@@ -118,7 +114,7 @@ export default {
     margin: 20px auto;
     border-radius: 10px;
     background-color:  var(--cl-bg-op);
-    color: #34AEFF;
+    color: var(--cl-bg-opposite);
     .top {
       height: 35px;
       line-height: 35px;

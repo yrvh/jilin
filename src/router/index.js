@@ -4,10 +4,12 @@ import VueRouter from 'vue-router'
 import login from  './login'
 import home from './home'
 
-
 const Message = () => import('views/message/Message')
 const Car = () => import('views/car/Car')
 const Mine = () => import('views/mine/Mine')
+
+
+const GoodsDetail = () => import('views/detail/GoodsDetail')
 
 
 // 1.安装插件
@@ -42,14 +44,19 @@ const routes = [
       },
     ]
   },
+  {
+    path: '/goodsdetail',
+    component: GoodsDetail
+  },
   ...login,
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
+
 
 // 3. 导出
 export default router

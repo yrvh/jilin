@@ -6,7 +6,7 @@ import {
   Tag, List, PullRefresh, Image, Form, Field, Checkbox, CheckboxGroup,
   Notify, Toast, CountDown, Empty, DropdownMenu, DropdownItem, Uploader,
   Step, Steps, Dialog, Switch, Picker, DatetimePicker, Area, Card, Stepper,
-  GoodsAction, GoodsActionIcon, GoodsActionButton
+  GoodsAction, GoodsActionIcon, GoodsActionButton, Radio, SubmitBar
 } from 'vant'
 
 // 该数组每一项 用Vue.use() 来注册成为组件
@@ -16,7 +16,7 @@ const components_arr = [
   Tag, List, PullRefresh, Image, Form, Field, Checkbox, CheckboxGroup,
   CountDown, Empty, DropdownMenu, DropdownItem, Uploader,
   Step, Steps, Dialog, Switch, Picker, DatetimePicker, Area, Card, Stepper,
-  GoodsAction, GoodsActionIcon, GoodsActionButton
+  GoodsAction, GoodsActionIcon, GoodsActionButton, Radio, SubmitBar
 ]
 
 components_arr.forEach( (item,index) => {

@@ -1,6 +1,15 @@
 <template>
   <div class="rubbish">
-    <Goods v-for="item in goodlist" :key="item.id" :info="item"/>
+    <Goods v-for="item in goodlist" :key="item.id"
+           :img="item.img" :title="item.title" :price="item.price" :units="item.units"
+           :old="item.old_price" :amount="item.amount">
+<!--      <div class="counter">-->
+<!--        <van-stepper v-model="item.num" :min="0"  integer input-width="40px" button-size="20px"/>-->
+<!--        <van-checkbox v-model="item.choose" icon-size="25px" checked-color="#1079f2"-->
+<!--                      @click="onCheckbox(item.id)"/>-->
+<!--      </div>-->
+      <van-button size="small" text="加入购物车" color="#1079F2" icon="" round></van-button>
+    </Goods>
   </div>
 </template>
 
@@ -9,179 +18,52 @@ export default {
   name: "Rubbish",
   data() {
     return {
+      labourfrom: {   // 用工类型表单==================
+        typeid: '',   // 用工类型的id
+        time: '',   // 用工时间
+        addressid: '',   // 用工地址id
+      },
       goodlist: [
         {
           id: 1,
-          img: require("assets/img/home/r1.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 23423,
+          img: require("assets/img/home/r7.jpg"),
+          title: '清运小区生活垃圾',
+          units: '车',   // 计量单位
+          old_price: 1115.00,   // 原价
+          price: 1114.00,
+          amount: 23423,   // 总销量
+          num: 0,   // 选中的数量
+          choose: false,   // 是否选择该商品
         },
         {
           id: 2,
-          img: require("assets/img/home/r2.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 3452,
+          img: require("assets/img/home/r1.jpg"),
+          title: '清运居民建筑垃圾',
+          units: '斗',
+          old_price: 1119.00,   // 原价
+          price: 1116.00,
+          amount: 34532,
+          num: 0,   // 选中的数量
+          choose: false,   // 是否选择该商品
         },
         {
           id: 3,
-          img: require("assets/img/home/r4.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 94.00,
+          img: require("assets/img/home/r2.jpg"),
+          title: '清运公司建筑垃圾',
+          units: '车',
+          old_price: 1130.00,   // 原价
+          price: 1120.00,
           amount: 34532,
+          num: 0,   // 选中的数量
+          choose: false,   // 是否选择该商品
         },
-        {
-          id: 4,
-          img: require("assets/img/home/r5.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 74.00,
-          amount: 3452,
-        },
-        {
-          id: 5,
-          img: require("assets/img/home/r6.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 3245,
-        },
-        {
-          id: 6,
-          img: require("assets/img/home/r7.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 34532,
-        },
-        {
-          id: 7,
-          img: require("assets/img/home/r8.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 6758,
-        },
-        {
-          id: 8,
-          img: require("assets/img/home/r3.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 24.00,
-          amount: 678,
-        },
-        {
-          id: 9,
-          img: require("assets/img/home/r1.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 33.00,
-          amount: 65,
-        },
-        {
-          id: 10,
-          img: require("assets/img/home/r6.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 44.00,
-          amount: 35434,
-        },
-        {
-          id: 11,
-          img: require("assets/img/home/r5.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount:43576 ,
-        },
-        {
-          id: 12,
-          img: require("assets/img/home/r1.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 23423,
-        },
-        {
-          id: 13,
-          img: require("assets/img/home/r3.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 3452,
-        },
-        {
-          id: 14,
-          img: require("assets/img/home/r4.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 94.00,
-          amount: 34532,
-        },
-        {
-          id: 15,
-          img: require("assets/img/home/r6.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 3245,
-        },
-        {
-          id: 16,
-          img: require("assets/img/home/r7.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 34532,
-        },
-        {
-          id: 17,
-          img: require("assets/img/home/r8.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount: 6758,
-        },
-        {
-          id: 18,
-          img: require("assets/img/home/r3.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 24.00,
-          amount: 678,
-        },
-        {
-          id: 19,
-          img: require("assets/img/home/r1.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 33.00,
-          amount: 65,
-        },
-        {
-          id: 20,
-          img: require("assets/img/home/r6.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 44.00,
-          amount: 35434,
-        },
-        {
-          id: 21,
-          img: require("assets/img/home/r4.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 54.00,
-          amount:43576 ,
-        },
-        {
-          id: 22,
-          img: require("assets/img/home/r5.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 74.00,
-          amount: 3452,
-        },
-        {
-          id: 23,
-          img: require("assets/img/home/r3.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 74.00,
-          amount: 3452,
-        },
-        {
-          id: 24,
-          img: require("assets/img/home/r1.jpg"),
-          title: '硅酸盐水泥上等优质水泥独家代理高品质',
-          price: 74.00,
-          amount: 3452,
-        },
-
-
 
       ]
+    }
+  },
+  methods: {
+    onCheckbox(id) {
+      console.log(id)
     }
   }
 }
@@ -193,5 +75,12 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  .counter {
+    display: flex;
+    justify-content: space-between;
+  }
+  .van-button {
+    float: right;
+  }
 }
 </style>

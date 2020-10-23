@@ -4,11 +4,25 @@
 const urlDns = "https://111.230.225.181";   // 腾讯云
 // const urlDns = 'http://123.207.32.32:8000'   // why 服务器
 
+const path = require("path")
 
 module.exports = {
-  // 解决别名的问题
-  configureWebpack: {
-    resolve: {
+  publicPath: process.env.NODE_ENV === 'production'? './' : '/',
+  outputDir: 'dist',
+  assetsDir: 'static',
+  indexPath: 'index.html',
+  filenameHashing: true,   // 文件名哈希
+  runtimeCompiler: false,   // 是否包含运行时编译器vue构建版本
+  transpileDependencies: [],   // 转译某一个依赖
+  productionSourceMap: false,
+
+
+  configureWebpack: {   // 配置webpack打包
+    externals: {   // 此处可以配置一些cdn资源
+
+    },
+
+    resolve: {   // 配置别名
       alias: {
         'assets': '@/assets',
         'common': '@/common',
@@ -21,9 +35,11 @@ module.exports = {
   },
   // 反向代理:   解决访问数据的问题
   devServer: {
+    publicPath: process.env.NODE_ENV === 'production'? '/jilinC/' : '/',
     open: false,
     https: false,
     hotOnly: false,
+    port: 8011,
     proxy: {
       '/control': {
         target: urlDns,   // 这样 /control 将会替换成 https://111.230.225.181
@@ -50,5 +66,4 @@ module.exports = {
       }
     }
   },
-  // publicPath: "./"
 }

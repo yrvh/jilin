@@ -1,4 +1,3 @@
-
 const Home = () => import('views/home/Home')
 const Material = () => import('views/home/material/Material')
 const Carry = () => import('views/home/carry/Carry')

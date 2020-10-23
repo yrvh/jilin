@@ -50,7 +50,7 @@ export default {
           name: '李白',
           time: '3小时前',
           new: '瓷砖多少钱?',
-          amount: '3小时前'
+          amount: '3'
         },
         {
           img: require('assets/img/home/v5.jpg'),
@@ -60,21 +60,21 @@ export default {
           amount: '2'
         },
         {
-          img: require('assets/img/home/v6.jpg'),
+          img: require('assets/img/home/s3.jpg'),
           name: '王阳明',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '3'
         },
         {
-          img: require('assets/img/home/v7.jpg'),
+          img: require('assets/img/home/s4.jpg'),
           name: '老杜',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '4'
         },
         {
-          img: require('assets/img/home/v8.jpg'),
+          img: require('assets/img/home/s6.jpg'),
           name: '吴有训',
           time: '3小时前',
           new: '瓷砖多少钱?',
@@ -106,7 +106,7 @@ export default {
           name: '李白',
           time: '3小时前',
           new: '瓷砖多少钱?',
-          amount: '3小时前'
+          amount: '3'
         },
         {
           img: require('assets/img/home/v5.jpg'),
@@ -116,21 +116,21 @@ export default {
           amount: '2'
         },
         {
-          img: require('assets/img/home/v6.jpg'),
+          img: require('assets/img/home/s3.jpg'),
           name: '王阳明',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '3'
         },
         {
-          img: require('assets/img/home/v7.jpg'),
+          img: require('assets/img/home/s4.jpg'),
           name: '老杜',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '4'
         },
         {
-          img: require('assets/img/home/v8.jpg'),
+          img: require('assets/img/home/s6.jpg'),
           name: '吴有训',
           time: '3小时前',
           new: '瓷砖多少钱?',
@@ -162,7 +162,7 @@ export default {
           name: '李白',
           time: '3小时前',
           new: '瓷砖多少钱?',
-          amount: '3小时前'
+          amount: '3'
         },
         {
           img: require('assets/img/home/v5.jpg'),
@@ -172,21 +172,21 @@ export default {
           amount: '2'
         },
         {
-          img: require('assets/img/home/v6.jpg'),
+          img: require('assets/img/home/s3.jpg'),
           name: '王阳明',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '3'
         },
         {
-          img: require('assets/img/home/v7.jpg'),
+          img: require('assets/img/home/s4.jpg'),
           name: '老杜',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '4'
         },
         {
-          img: require('assets/img/home/v8.jpg'),
+          img: require('assets/img/home/s6.jpg'),
           name: '吴有训',
           time: '3小时前',
           new: '瓷砖多少钱?',
@@ -218,7 +218,7 @@ export default {
           name: '李白',
           time: '3小时前',
           new: '瓷砖多少钱?',
-          amount: '3小时前'
+          amount: '3'
         },
         {
           img: require('assets/img/home/v5.jpg'),
@@ -228,21 +228,21 @@ export default {
           amount: '2'
         },
         {
-          img: require('assets/img/home/v6.jpg'),
+          img: require('assets/img/home/s3.jpg'),
           name: '王阳明',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '3'
         },
         {
-          img: require('assets/img/home/v7.jpg'),
+          img: require('assets/img/home/s4.jpg'),
           name: '老杜',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '4'
         },
         {
-          img: require('assets/img/home/v8.jpg'),
+          img: require('assets/img/home/s6.jpg'),
           name: '吴有训',
           time: '3小时前',
           new: '瓷砖多少钱?',
@@ -274,7 +274,7 @@ export default {
           name: '李白',
           time: '3小时前',
           new: '瓷砖多少钱?',
-          amount: '3小时前'
+          amount: '3'
         },
         {
           img: require('assets/img/home/v5.jpg'),
@@ -284,21 +284,21 @@ export default {
           amount: '2'
         },
         {
-          img: require('assets/img/home/v6.jpg'),
+          img: require('assets/img/home/s3.jpg'),
           name: '王阳明',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '3'
         },
         {
-          img: require('assets/img/home/v7.jpg'),
+          img: require('assets/img/home/s4.jpg'),
           name: '老杜',
           time: '3小时前',
           new: '瓷砖多少钱?',
           amount: '4'
         },
         {
-          img: require('assets/img/home/v8.jpg'),
+          img: require('assets/img/home/s5.jpg'),
           name: '吴有训',
           time: '3小时前',
           new: '瓷砖多少钱?',

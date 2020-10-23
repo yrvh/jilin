@@ -132,7 +132,7 @@ export default {
     height: 75px;
     border-bottom-left-radius: 50% 20px;
     border-bottom-right-radius: 50% 20px;
-    background-color: var(--cl-bg-op);
+    background-color: rgba(230,230,230,0.3);
   }
   .myswipe {
     transform: translateY(-70px);
